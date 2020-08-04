@@ -5,11 +5,16 @@ function initMap() {
         zoom: 15,
         scrollwheel: false
     });
-	
+    
+    var image = 'https://img.icons8.com/plasticine/2x/bus.png';
+    
+  
     for (i=0; i<busLocations.length; i++){
         var marker = new google.maps.Marker({
             position: { lat: parseFloat(busLocations[i].LATITUDE), lng: parseFloat(busLocations[i].LONGITUDE) },
             map: map,
+            icon:image,
         });
-    }
+       
+      }
 }
